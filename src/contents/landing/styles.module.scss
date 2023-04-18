@@ -1,0 +1,82 @@
+@use "@/common/vars" as *;
+
+.banner {
+  background: $primary;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  a {
+    margin-left: 0.5rem;
+    color: $highlight;
+
+    &:hover {
+      color: #040404;
+    }
+  }
+}
+
+.nav {
+  padding: 2rem;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+}
+
+.header {
+  height: 65vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  .bgImage {
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    filter: brightness(60%);
+  }
+
+  h1 {
+    font-size: 9rem;
+    margin-top: 3%;
+    line-height: 9rem;
+
+    @media all and (max-width: 670px) {
+      font-size: 20vw;
+      line-height: 20vw;
+    }
+  }
+
+  p[role="doc-subtitle"] {
+    font-size: 2rem;
+    margin-top: 4rem;
+
+    @media all and (max-width: 670px) {
+      margin-top: 6vw;
+    }
+
+    @media all and (max-width: 470px) {
+      font-size: 6vw;
+    }
+  }
+
+  .wheat {
+    height: auto;
+    width: 870px;
+    position: relative;
+    margin-top: -3.5%;
+
+    @media all and (max-width: 1185px) {
+      width: 86%;
+    }
+  }
+}
