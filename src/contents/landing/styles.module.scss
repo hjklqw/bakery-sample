@@ -173,4 +173,27 @@
     text-align: center;
     line-height: 1.35em;
   }
+
+  @media all and (max-width: 1525px) {
+    max-width: 90%;
+  }
+}
+
+@media all and (max-width: 1085px) {
+  .categories,
+  .commitments {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 935px) {
+  .categories,
+  .commitments {
+    grid-template-columns: unset;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .categories > a .fancyName {
+    font-size: 18vw;
+  }
 }
