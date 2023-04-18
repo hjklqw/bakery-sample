@@ -23,7 +23,7 @@
     display: inline-block;
 
     &:hover {
-      color: #040404;
+      color: $highlightDark;
     }
   }
 }
@@ -32,7 +32,7 @@
   background: #3a372d;
   color: white;
   font-size: 0.9rem;
-  padding: 2rem;
+  padding: 5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;

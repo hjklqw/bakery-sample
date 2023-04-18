@@ -48,7 +48,7 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.highlighted}`}>
         <header>
           <h2 className={stylizedFont.className}>Our commitment to you</h2>
           <p>Our imaginary values, bringing you the best product possible.</p>
@@ -56,6 +56,7 @@ export const LandingPage = () => {
         <div className={styles.commitments}>
           {commitments.map((c) => (
             <div key={c.name}>
+              <span className={styles.border} />
               <div className={styles.icon}>{c.icon}</div>
               <p className={styles.valueName}>{c.name}</p>
               <p className={styles.valueDesc}>{c.description}</p>
@@ -72,11 +73,10 @@ export const LandingPage = () => {
         <div className={styles.story}>
           <section>
             <p>
-              <span className={brandFont.className}>M</span>ichelle Poon founded
-              this bakery on April of 2023 when she was thinking about samples
-              to put onto her portfolio. And what better than to create
-              something that involves hours of looking through stock images of
-              delicious bread?
+              Michelle Poon founded this bakery on April of 2023 when she was
+              thinking about samples to put onto her portfolio. And what better
+              than to create something that involves hours of looking through
+              stock images of delicious bread?
             </p>
             <p>
               Bread is great. Here&apos;s another sentence to pad out this

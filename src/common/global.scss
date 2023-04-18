@@ -31,6 +31,10 @@ button {
   &:not(:hover) {
     color: white;
   }
+
+  &:hover {
+    background: $highlightDark;
+  }
 }
 
 p {

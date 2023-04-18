@@ -58,12 +58,19 @@
 .section {
   max-width: $maxContentWidth;
   margin: 0 auto;
-  margin-top: 7rem;
-  margin-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
   header {
     margin-bottom: 3rem;
     text-align: center;
+    padding: 0 2rem;
+  }
+
+  &.highlighted {
+    max-width: none;
+    background: $primaryLight;
+    padding-bottom: 5rem;
   }
 }
 
@@ -124,6 +131,15 @@
       margin-left: 2.5rem;
     }
   }
+
+  @media all and (max-width: 935px) {
+    grid-template-columns: unset;
+    grid-template-rows: repeat(3, 1fr);
+
+    & > a .fancyName {
+      font-size: 18vw;
+    }
+  }
 }
 
 .commitments {
@@ -140,6 +156,27 @@
     align-items: center;
     max-width: 300px;
     margin: 0 auto;
+    position: relative;
+
+    .border {
+      border: 4px solid $primary;
+      width: 120%;
+      height: 78%;
+      position: absolute;
+      bottom: -1.5rem;
+
+      &::after {
+        content: "";
+        width: 177px;
+        height: 4px;
+        background: #fbf9f2;
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   .icon {
@@ -154,11 +191,19 @@
     font-size: 5.5rem;
     position: relative;
     color: white;
+    z-index: 1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 5px solid $primaryLight;
+    }
 
     &:before {
-      content: " ";
+      content: "";
       position: absolute;
-      z-index: -1;
       inset: -10px;
       border-radius: 50%;
       border: 5px solid $primary;
@@ -176,8 +221,24 @@
     text-align: center;
   }
 
-  @media all and (max-width: 1525px) {
+  @media all and (max-width: 1685px) {
+    max-width: 80%;
+  }
+
+  @media all and (max-width: 1490px) {
     max-width: 90%;
+  }
+
+  @media all and (max-width: 1320px) {
+    max-width: unset;
+    grid-template-columns: unset;
+    grid-template-rows: repeat(3, 1fr);
+
+    & > div {
+      max-width: unset;
+      width: 70%;
+      margin-bottom: 3rem;
+    }
   }
 }
 
@@ -185,18 +246,6 @@
   .categories,
   .commitments {
     max-width: 100%;
-  }
-}
-
-@media all and (max-width: 935px) {
-  .categories,
-  .commitments {
-    grid-template-columns: unset;
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .categories > a .fancyName {
-    font-size: 18vw;
   }
 }
 
@@ -227,6 +276,28 @@
 
     img {
       object-fit: cover;
+    }
+  }
+
+  @media all and (max-width: 1655px) {
+    padding: 0 clamp(2rem, 8vw, 8vw);
+
+    .storyImageContainer {
+      width: 40vw;
+    }
+  }
+
+  @media all and (max-width: 1080px) {
+    flex-direction: column-reverse;
+
+    section:first-child {
+      margin-right: 0;
+      max-width: unset;
+      margin-top: 2rem;
+    }
+
+    .storyImageContainer {
+      width: 100%;
     }
   }
 }
