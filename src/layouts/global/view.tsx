@@ -52,7 +52,7 @@ export const GlobalLayout = ({ children }: Props) => (
         <div className={styles.row}>12345 Somewhere Drive</div>
         <div className={styles.row}>Delicious City, SW A1B 2C3</div>
         <div className={styles.row}>Possibly Canada</div>
-        <br />
+        <div className={styles.spacer} />
         <div className={styles.row}>
           <BsTelephone strokeWidth={0.5} />
           <a href="tel:+13214567890">+1 321-456-7890</a>
