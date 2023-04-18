@@ -2,6 +2,7 @@
 
 .header {
   height: 65vh;
+  min-height: 700px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -20,7 +21,7 @@
 
   h1 {
     font-size: 9rem;
-    margin-top: 3%;
+    margin-top: 2%;
     line-height: 9rem;
 
     @media all and (max-width: 670px) {
@@ -50,6 +51,74 @@
 
     @media all and (max-width: 1185px) {
       width: 86%;
+    }
+  }
+}
+
+.section {
+  margin-top: 5rem;
+
+  header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+
+  & > a {
+    position: relative;
+    height: 500px;
+    padding: 2rem;
+    color: white;
+
+    img {
+      object-fit: cover;
+      filter: contrast(50%);
+      z-index: -1;
+      transition: filter 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: $highlight;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+        0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+
+      img {
+        filter: contrast(100%);
+      }
+
+      .normalName,
+      .fancyName {
+        letter-spacing: 1px;
+      }
+    }
+
+    .normalName,
+    .fancyName {
+      transition: letter-spacing 0.3s ease-in-out;
+    }
+
+    .fancyName {
+      text-transform: none;
+      font-size: 6vw;
+      transform: rotate(354deg);
+      display: block;
+      line-height: 1.2em;
+    }
+
+    .normalName {
+      display: block;
+      font-size: 2rem;
+      margin-top: -1.5rem;
+      font-weight: 500;
+      margin-left: 2.5rem;
     }
   }
 }
