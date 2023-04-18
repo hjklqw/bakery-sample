@@ -56,7 +56,10 @@
 }
 
 .section {
-  margin-top: 5rem;
+  max-width: $maxContentWidth;
+  margin: 0 auto;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
 
   header {
     margin-bottom: 3rem;
@@ -66,7 +69,7 @@
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 2rem;
   padding: 2rem;
   max-width: 80%;
@@ -74,9 +77,9 @@
 
   & > a {
     position: relative;
-    height: 500px;
     padding: 2rem;
     color: white;
+    height: 500px;
 
     img {
       object-fit: cover;
@@ -171,7 +174,6 @@
 
   .valueDesc {
     text-align: center;
-    line-height: 1.35em;
   }
 
   @media all and (max-width: 1525px) {
@@ -195,5 +197,36 @@
 
   .categories > a .fancyName {
     font-size: 18vw;
+  }
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  section:first-child {
+    flex: 1;
+    margin-right: 2rem;
+    max-width: 800px;
+
+    p {
+      margin-bottom: 1rem;
+      text-indent: 2em;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+
+  .storyImageContainer {
+    width: 700px;
+    height: 450px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
   }
 }

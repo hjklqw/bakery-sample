@@ -21,6 +21,22 @@ a {
   @include clickable;
 }
 
+button {
+  @include clickable;
+  text-transform: uppercase;
+  background: $highlight;
+  border: none;
+  padding: 1rem 2rem;
+
+  &:not(:hover) {
+    color: white;
+  }
+}
+
+p {
+  line-height: 1.35em;
+}
+
 button,
 input {
   font-size: inherit;

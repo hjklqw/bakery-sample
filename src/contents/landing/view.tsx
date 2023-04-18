@@ -27,7 +27,7 @@ export const LandingPage = () => {
 
       <section className={styles.section}>
         <header>
-          <h2 className={stylizedFont.className}>Products</h2>
+          <h2 className={stylizedFont.className}>Our products</h2>
           <p>Explore all the delicious options we have to offer.</p>
         </header>
         <div className={styles.categories}>
@@ -61,6 +61,36 @@ export const LandingPage = () => {
               <p className={styles.valueDesc}>{c.description}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <header>
+          <h2 className={stylizedFont.className}>Our story</h2>
+          <p>How we got here, why we&apos;re baking, and the road ahead.</p>
+        </header>
+        <div className={styles.story}>
+          <section>
+            <p>
+              <span className={brandFont.className}>M</span>ichelle Poon founded
+              this bakery on April of 2023 when she was thinking about samples
+              to put onto her portfolio. And what better than to create
+              something that involves hours of looking through stock images of
+              delicious bread?
+            </p>
+            <p>
+              Bread is great. Here&apos;s another sentence to pad out this
+              paragraph. Not using the patented placeholder text makes things
+              look more realistic, though most likely no one will ever read
+              this. Soft, toasted bread with a chewy texture is the best.
+            </p>
+            <Link href="/about">
+              <button type="button">Read more &rarr;</button>
+            </Link>
+          </section>
+          <section className={styles.storyImageContainer}>
+            <Image src="/story.jpg" alt="Story" fill />
+          </section>
         </div>
       </section>
     </>
