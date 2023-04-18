@@ -89,7 +89,7 @@ export const LandingPage = () => {
             </Link>
           </section>
           <section className={styles.storyImageContainer}>
-            <Image src="/story.jpg" alt="Story" fill />
+            <Image src="/story.jpg" alt="Story" fill priority />
           </section>
         </div>
       </section>
