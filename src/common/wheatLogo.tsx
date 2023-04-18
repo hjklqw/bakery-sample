@@ -1,12 +1,7 @@
 import { SVGProps } from "react";
 
 export const WheatLogo = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width="1287.00"
-    height="270.00"
-    viewBox="0.00 0.00 1287.00 270.00"
-    {...props}
-  >
+  <svg viewBox="12.58 22.5 1261.84 238.3" {...props}>
     <g
       strokeLinecap="round"
       id="Layer_1"

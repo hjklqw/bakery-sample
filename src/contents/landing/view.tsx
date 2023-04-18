@@ -3,7 +3,7 @@ import Image from "next/image";
 import { brandFont, stylizedFont } from "@/common/fonts";
 
 import styles from "./styles.module.scss";
-import { WheatLogo } from "./wheatLogo";
+import { WheatLogo } from "../../common/wheatLogo";
 
 export const LandingPage = () => {
   return (
