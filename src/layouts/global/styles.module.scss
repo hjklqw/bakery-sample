@@ -1,0 +1,19 @@
+@use "@/common/vars" as *;
+
+.banner {
+  background: $primary;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  a {
+    margin-left: 0.5rem;
+    color: $highlight;
+    display: inline-block;
+
+    &:hover {
+      color: #040404;
+    }
+  }
+}

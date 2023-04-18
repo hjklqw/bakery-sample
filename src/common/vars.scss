@@ -1,2 +1,13 @@
 $primary: #ffc516;
 $highlight: #bc0e0e;
+
+@mixin clickable {
+  color: #535047;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+    letter-spacing: 1px;
+  }
+}

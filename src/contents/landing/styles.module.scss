@@ -1,32 +1,5 @@
 @use "@/common/vars" as *;
 
-.banner {
-  background: $primary;
-  padding: 0.8rem;
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 500;
-
-  a {
-    margin-left: 0.5rem;
-    color: $highlight;
-
-    &:hover {
-      color: #040404;
-    }
-  }
-}
-
-.nav {
-  padding: 2rem;
-  text-align: center;
-
-  a {
-    display: inline-block;
-    padding: 0 1rem;
-  }
-}
-
 .header {
   height: 65vh;
   position: relative;

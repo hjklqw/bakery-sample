@@ -1,0 +1,65 @@
+@use "@/common/vars" as *;
+
+$containerPadding: 2rem;
+$mobileNavWidth: 580px;
+
+.container {
+  position: relative;
+}
+
+.mobileNavToggler {
+  display: none;
+  padding: $containerPadding;
+
+  button {
+    display: block;
+    background: none;
+    border: none;
+    margin-left: auto;
+    @include clickable;
+  }
+
+  svg {
+    font-size: 2rem;
+    display: block;
+  }
+
+  @media all and (max-width: $mobileNavWidth) {
+    display: block;
+  }
+}
+
+.nav {
+  padding: $containerPadding;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+
+  hr {
+    display: none;
+  }
+
+  @media all and (max-width: $mobileNavWidth) {
+    display: block;
+    transition: all 0.7s ease-out;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    a {
+      display: block;
+      padding: 1rem;
+    }
+
+    &.open {
+      max-height: 500px;
+      padding: $containerPadding;
+      opacity: 1;
+      border-top: 1px solid #c0baaa;
+    }
+  }
+}
