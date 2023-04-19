@@ -65,12 +65,50 @@
     margin-bottom: 3rem;
     text-align: center;
     padding: 0 2rem;
+
+    p {
+      position: relative;
+      display: inline-block;
+    }
+
+    svg {
+      position: absolute;
+      width: 80%;
+    }
   }
 
   &.highlighted {
     max-width: none;
     background: $primaryLight;
     padding-bottom: 5rem;
+  }
+
+  &:nth-of-type(odd) {
+    header svg {
+      right: -45%;
+      top: -2.6rem;
+
+      g:first-child {
+        display: none;
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    header svg {
+      left: -45%;
+      top: -3rem;
+
+      g:last-child {
+        display: none;
+      }
+    }
+  }
+
+  @media all and (max-width: 790px) {
+    header svg {
+      display: none;
+    }
   }
 }
 

@@ -5,6 +5,8 @@ import { brandFont, stylizedFont } from "@/common/fonts";
 import { WheatLogo } from "@/common/wheatLogo";
 
 import styles from "./styles.module.scss";
+
+import { Section } from "./section";
 import { categories, commitments } from "./data";
 
 export const LandingPage = () => {
@@ -25,11 +27,10 @@ export const LandingPage = () => {
         <WheatLogo className={styles.wheat} />
       </header>
 
-      <section className={styles.section}>
-        <header>
-          <h2 className={stylizedFont.className}>Our products</h2>
-          <p>Explore all the delicious options we have to offer.</p>
-        </header>
+      <Section
+        title="Our products"
+        subtitle="Explore all the delicious options we have to offer."
+      >
         <div className={styles.categories}>
           {categories.map((c) => (
             <Link href={c.route} key={c.name}>
@@ -46,13 +47,13 @@ export const LandingPage = () => {
             </Link>
           ))}
         </div>
-      </section>
+      </Section>
 
-      <section className={`${styles.section} ${styles.highlighted}`}>
-        <header>
-          <h2 className={stylizedFont.className}>Our commitment to you</h2>
-          <p>Our imaginary values, bringing you the best product possible.</p>
-        </header>
+      <Section
+        title="Our commitment to you"
+        subtitle="Our imaginary values, bringing you the best product possible."
+        isHighlighted
+      >
         <div className={styles.commitments}>
           {commitments.map((c) => (
             <div key={c.name}>
@@ -63,13 +64,12 @@ export const LandingPage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </Section>
 
-      <section className={styles.section}>
-        <header>
-          <h2 className={stylizedFont.className}>Our story</h2>
-          <p>How we got here, why we&apos;re baking, and the road ahead.</p>
-        </header>
+      <Section
+        title="Our story"
+        subtitle="How we got here, why we're baking, and the road ahead."
+      >
         <div className={styles.story}>
           <section>
             <p>
@@ -92,7 +92,7 @@ export const LandingPage = () => {
             <Image src="/story.jpg" alt="Story" fill priority />
           </section>
         </div>
-      </section>
+      </Section>
     </>
   );
 };

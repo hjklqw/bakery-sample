@@ -23,7 +23,7 @@ export const categories: {
     name: "Cakes",
     route: "/products/cakes",
     imageUrl: "/category-cakes.jpg",
-    imagePosition: "50% 60%;",
+    imagePosition: "50% 60%",
   },
 ];
 
