@@ -8,18 +8,13 @@ import styles from "./styles.module.scss";
 
 import { Section } from "./section";
 import { categories, commitments } from "./data";
+import { HeaderImage } from "./headerImage";
 
 export const LandingPage = () => {
   return (
     <>
       <header className={styles.header}>
-        <Image
-          src="/site-header.jpg"
-          alt="header"
-          priority
-          fill
-          className={styles.bgImage}
-        />
+        <HeaderImage />
         <h1 className={brandFont.className}>Imaginary Bakery</h1>
         <p role="doc-subtitle" className={stylizedFont.className}>
           Smells like a dream.
