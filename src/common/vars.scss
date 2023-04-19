@@ -14,3 +14,9 @@ $maxContentWidth: 2300px;
     letter-spacing: 1px;
   }
 }
+
+@mixin headerImage {
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}

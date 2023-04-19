@@ -1,0 +1,34 @@
+@use "@/common/vars" as *;
+
+.header {
+  height: 35vh;
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-size: 8rem;
+    margin-top: -2rem;
+  }
+
+  .bgImage {
+    @include headerImage;
+    filter: contrast(60%);
+  }
+
+  .wheat {
+    position: relative;
+    width: 750px;
+    margin-top: -9.5rem;
+
+    @media all and (max-width: 1185px) {
+      width: 86%;
+    }
+  }
+}

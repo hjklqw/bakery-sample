@@ -13,9 +13,7 @@
   text-align: center;
 
   .bgImage {
-    object-fit: cover;
-    object-position: center;
-    z-index: -1;
+    @include headerImage;
     filter: contrast(68%) brightness(88%);
   }
 
@@ -44,9 +42,8 @@
   }
 
   .wheat {
-    height: auto;
-    width: 870px;
     position: relative;
+    width: 870px;
     margin-top: -3.5%;
 
     @media all and (max-width: 1185px) {

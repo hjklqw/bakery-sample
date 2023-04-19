@@ -1,0 +1,6 @@
+@use "@/common/vars" as *;
+
+.container {
+  max-width: $maxContentWidth;
+  margin: 5rem auto;
+}
