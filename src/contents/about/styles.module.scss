@@ -1,0 +1,24 @@
+@use "@/common/vars" as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  .image {
+    flex-shrink: 0;
+    width: 600px;
+    height: 900px;
+    position: relative;
+    margin-left: 2rem;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.quote {
+  margin-left: auto;
+  margin-right: 2rem;
+  margin-top: -2rem;
+}

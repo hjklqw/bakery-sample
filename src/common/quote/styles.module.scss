@@ -1,0 +1,63 @@
+@use "@/common/vars" as *;
+
+.wrapper {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  max-width: 350px;
+  position: relative;
+  color: #382d0b;
+
+  &::before,
+  &::after {
+    font-size: 8rem;
+    line-height: 1em;
+    position: absolute;
+  }
+
+  &::before {
+    content: "\201C";
+    top: -2rem;
+    left: -4rem;
+    transform: rotate(6deg);
+  }
+  &::after {
+    content: "\201D";
+    right: -5rem;
+    bottom: -3rem;
+  }
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    top: -2rem;
+    background: $highlight;
+    clip-path: polygon(0 0, 100% 22%, 100% 85%, 2% 95%);
+    transform: rotate(351deg);
+
+    &:last-of-type {
+      top: -1rem;
+      bottom: 1rem;
+      background: #fff7de;
+      clip-path: polygon(0 17%, 100% 0, 100% 100%, 0 120%);
+      transform: rotate(16deg);
+    }
+  }
+
+  blockquote {
+    font-size: 3rem;
+    line-height: 1em;
+    text-indent: 1em;
+  }
+
+  figcaption {
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: right;
+
+    &::before {
+      content: "\2014";
+      padding-right: 0.5em;
+    }
+  }
+}

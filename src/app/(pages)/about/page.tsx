@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
       <PageHeader title="About" imageSrc="/about-header.jpg" />
-      <PageContents>
+      <PageContents maxWidthOverride="1500px">
         <AboutPage />
       </PageContents>
     </>

@@ -66,7 +66,7 @@ export const LandingPage = () => {
         subtitle="How we got here, why we're baking, and the road ahead."
       >
         <div className={styles.story}>
-          <section>
+          <section className="p">
             <p>
               Michelle Poon founded this bakery on April of 2023 when she was
               thinking about samples to put onto her portfolio. And what better
