@@ -1,3 +1,4 @@
+import { LayoutProps } from "@/common/models";
 import { baseFont } from "@/common/fonts";
 import "@/common/global.scss";
 
@@ -8,11 +9,7 @@ export const metadata = {
   description: "A sample website for a delicious bakery.",
 };
 
-type Props = {
-  children: React.ReactNode;
-};
-
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en" className={baseFont.className}>
       <body>

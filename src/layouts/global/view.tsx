@@ -4,16 +4,14 @@ import { HiOutlineMail } from "react-icons/hi";
 
 import styles from "./styles.module.scss";
 
-import { Nav } from "./nav";
-import { hours } from "./data";
 import { brandFont, stylizedFont } from "@/common/fonts";
 import { WheatLogo } from "@/common/wheatLogo";
+import { LayoutProps } from "@/common/models";
 
-type Props = {
-  children: React.ReactNode;
-};
+import { Nav } from "./nav";
+import { hours } from "./data";
 
-export const GlobalLayout = ({ children }: Props) => (
+export const GlobalLayout = ({ children }: LayoutProps) => (
   <div className={styles.wrapper}>
     <div className={styles.banner}>
       New products available for Mother&apos;s Day 2023!
