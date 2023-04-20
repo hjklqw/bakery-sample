@@ -6,7 +6,14 @@ import { AboutPage } from "@/contents/about";
 export default function Page() {
   return (
     <>
-      <PageHeader title="About" imageSrc="/about-header.jpg" />
+      <PageHeader
+        title="About"
+        headerImage={{
+          src: "/about-header.jpg",
+          basePosY: 60,
+          filterStyle: "contrast(60%)",
+        }}
+      />
       <PageContents maxWidthOverride="1500px">
         <AboutPage />
       </PageContents>

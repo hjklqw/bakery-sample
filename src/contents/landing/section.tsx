@@ -1,5 +1,5 @@
 import { stylizedFont } from "@/common/fonts";
-import { WheatLogo } from "@/common/wheatLogo";
+import { WheatLogo } from "@/common/assets/wheatLogo";
 
 import styles from "./styles.module.scss";
 

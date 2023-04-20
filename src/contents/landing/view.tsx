@@ -2,24 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { brandFont, stylizedFont } from "@/common/fonts";
-import { WheatLogo } from "@/common/wheatLogo";
+import { WheatLogo } from "@/common/assets/wheatLogo";
+import { PageFrame } from "@/common/assets/pageFrame";
+import { HeaderImage } from "@/common/headerImage";
 
 import styles from "./styles.module.scss";
 
 import { Section } from "./section";
 import { categories, commitments } from "./data";
-import { HeaderImage } from "./headerImage";
 
 export const LandingPage = () => {
   return (
     <>
       <header className={styles.header}>
-        <HeaderImage />
+        <HeaderImage
+          src="/site-header.jpg"
+          basePosY={80}
+          filterStyle="contrast(68%) brightness(88%)"
+        />
         <h1 className={brandFont.className}>Imaginary Bakery</h1>
         <p role="doc-subtitle" className={stylizedFont.className}>
           Smells like a dream.
         </p>
         <WheatLogo className={styles.wheat} />
+        <PageFrame className={styles.pageFrame} />
       </header>
 
       <Section

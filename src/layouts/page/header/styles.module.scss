@@ -17,11 +17,6 @@
     margin-top: -2rem;
   }
 
-  .bgImage {
-    @include headerImage;
-    filter: contrast(60%);
-  }
-
   .wheat {
     position: relative;
     width: 750px;
@@ -31,4 +26,11 @@
       width: 86%;
     }
   }
+}
+
+.pageFrame {
+  position: absolute;
+  bottom: -62%;
+  width: 100%;
+  transform: scaleX(-1) scaleY(0.3);
 }

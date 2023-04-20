@@ -12,11 +12,6 @@
   color: white;
   text-align: center;
 
-  .bgImage {
-    @include headerImage;
-    filter: contrast(68%) brightness(88%);
-  }
-
   h1 {
     font-size: 9rem;
     margin-top: 2%;
@@ -102,7 +97,11 @@
     }
   }
 
-  @media all and (max-width: 790px) {
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+
+  @media all and (max-width: 980px) {
     header svg {
       display: none;
     }
@@ -330,4 +329,11 @@
       width: 100%;
     }
   }
+}
+
+.pageFrame {
+  position: absolute;
+  bottom: -33%;
+  width: 100%;
+  transform: scaleX(-1) scaleY(0.3);
 }

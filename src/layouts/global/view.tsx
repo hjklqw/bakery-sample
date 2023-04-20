@@ -5,7 +5,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import styles from "./styles.module.scss";
 
 import { brandFont, stylizedFont } from "@/common/fonts";
-import { WheatLogo } from "@/common/wheatLogo";
+import { WheatLogo } from "@/common/assets/wheatLogo";
+import { PageFrame } from "@/common/assets/pageFrame";
 import { LayoutProps } from "@/common/models";
 
 import { Nav } from "./nav";
@@ -22,6 +23,8 @@ export const GlobalLayout = ({ children }: LayoutProps) => (
     <main>{children}</main>
 
     <footer className={styles.footer}>
+      <PageFrame className={styles.pageFrame} />
+
       <section className={styles.logoSection}>
         <p className={`${brandFont.className} ${styles.shopName}`}>
           Imaginary Bakery
