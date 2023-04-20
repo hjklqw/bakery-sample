@@ -33,14 +33,14 @@
     top: -2rem;
     background: $highlight;
     clip-path: polygon(0 0, 100% 22%, 100% 85%, 2% 95%);
-    transform: rotate(351deg);
+    transform: rotate(355deg);
 
     &:last-of-type {
       top: -1rem;
       bottom: 1rem;
       background: #fff7de;
-      clip-path: polygon(0 17%, 100% 0, 100% 100%, 0 120%);
-      transform: rotate(16deg);
+      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 120%);
+      transform: rotate(11deg);
     }
   }
 
@@ -65,13 +65,14 @@
 @media all and (max-width: 1630px) {
   .wrapper {
     padding-right: 0.5rem;
+    max-width: unset;
 
     .bg {
       &:first-child {
         transform: rotate(358deg);
       }
       &:last-of-type {
-        transform: rotate(3deg);
+        transform: rotate(2deg);
         clip-path: polygon(1.5% 17%, 100% 0, 98% 100%, 0 120%);
         right: -0.3rem;
       }
