@@ -61,3 +61,24 @@
     }
   }
 }
+
+@media all and (max-width: 1630px) {
+  .wrapper {
+    padding-right: 0.5rem;
+
+    .bg {
+      &:first-child {
+        transform: rotate(358deg);
+      }
+      &:last-of-type {
+        transform: rotate(3deg);
+        clip-path: polygon(1.5% 17%, 100% 0, 98% 100%, 0 120%);
+        right: -0.3rem;
+      }
+    }
+
+    &::after {
+      right: -6rem;
+    }
+  }
+}

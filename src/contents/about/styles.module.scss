@@ -3,6 +3,7 @@
 .wrapper {
   display: flex;
   align-items: center;
+  position: relative;
 
   .image {
     flex-shrink: 0;
@@ -21,4 +22,79 @@
   margin-left: auto;
   margin-right: 2rem;
   margin-top: -2rem;
+}
+
+@media all and (max-width: 1630px) {
+  .wrapper {
+    margin: 0 3rem;
+    padding-top: 10rem;
+
+    .image {
+      width: 500px;
+      height: 800px;
+    }
+  }
+
+  .quote {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    max-width: unset;
+    right: 2rem;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .wrapper {
+    flex-direction: column-reverse;
+
+    .image {
+      width: 100%;
+      height: 90vh;
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media all and (max-width: 605px) {
+  .wrapper {
+    padding-top: 13rem;
+  }
+}
+
+@media all and (max-width: 429px) {
+  .wrapper {
+    padding-top: 16rem;
+  }
+}
+
+@media all and (max-width: 370px) {
+  .wrapper {
+    padding-top: 17rem;
+    margin: 0;
+
+    section:first-child {
+      margin: 0 2rem;
+    }
+  }
+
+  .quote {
+    left: 2rem;
+    right: 3rem;
+  }
+}
+
+@media all and (max-width: 318px) {
+  .wrapper {
+    padding-top: 20rem;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 307px) {
+  .wrapper {
+    padding-top: 22rem;
+    margin: 0;
+  }
 }
