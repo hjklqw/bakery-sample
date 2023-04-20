@@ -6,11 +6,12 @@ import styles from "./styles.module.scss";
 
 export const AboutPage = () => (
   <div className={styles.pageWrapper}>
-    <Quote
-      text="Insert deep meaningful quote here"
-      author="A famous person"
-      className={styles.quote}
-    />
+    <div className={styles.quote}>
+      <Quote
+        text="Insert deep meaningful quote here"
+        author="A famous person"
+      />
+    </div>
     <div className={styles.wrapper}>
       <section className={`${styles.text} p`}>
         <p>

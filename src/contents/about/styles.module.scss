@@ -21,16 +21,11 @@
   }
 }
 
-.quote {
-  margin-right: 2rem;
-  margin-top: -2rem;
-}
-
 @media all and (min-width: 1630px) {
   .quote {
     position: absolute !important;
-    top: 0;
-    right: calc(600px + 2rem);
+    top: -3rem;
+    right: calc(600px + 3.5rem);
   }
 
   .wrapper section.text {
@@ -41,7 +36,6 @@
 @media all and (max-width: 1630px) {
   .wrapper {
     margin: 0 3rem;
-    padding-top: 3rem;
     align-items: flex-start;
 
     .image {
@@ -51,10 +45,9 @@
   }
 
   .quote {
-    margin: 0;
     margin-left: auto;
     margin-right: 3rem;
-    max-width: 900px !important;
+    max-width: 900px;
   }
 }
 
