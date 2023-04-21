@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+
 import { LayoutProps } from "@/common/models";
 import { baseFont } from "@/common/fonts";
 import "@/common/global.scss";
@@ -14,6 +16,7 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="en" className={baseFont.className}>
       <body>
         <GlobalLayout>{children}</GlobalLayout>
+        <Analytics />
       </body>
     </html>
   );
