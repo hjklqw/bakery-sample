@@ -1,7 +1,8 @@
 @use "@/common/vars" as *;
 
 $footerBgColor: #3a372d;
-$footerColumnBreakpoint: 890px;
+$footerTwoColumnBreakpoint: 1360px;
+$footerSingleColumnBreakpoint: 890px;
 
 .wrapper {
   display: flex;
@@ -104,9 +105,11 @@ $footerColumnBreakpoint: 890px;
     }
   }
 
-  @media all and (max-width: 1410px) {
+  @media all and (max-width: 1540px) {
     section {
-      max-width: 33.33%;
+      width: 25%;
+      flex: 1 1 0;
+      min-width: 0;
     }
 
     .logoSection .wheat {
@@ -114,16 +117,25 @@ $footerColumnBreakpoint: 890px;
     }
   }
 
-  @media all and (max-width: $footerColumnBreakpoint) {
-    flex-direction: column;
+  @media all and (max-width: $footerTwoColumnBreakpoint) {
+    flex-wrap: wrap;
 
     section {
+      min-width: 50%;
       max-width: unset;
 
       &:not(:last-child) {
         margin-bottom: 3rem;
       }
     }
+
+    .logoSection .wheat {
+      margin-top: 0;
+    }
+  }
+
+  @media all and (max-width: $footerSingleColumnBreakpoint) {
+    flex-direction: column;
   }
 }
 
@@ -143,7 +155,11 @@ $footerColumnBreakpoint: 890px;
   color: $footerBgColor;
   z-index: -1;
 
-  @media all and (max-width: $footerColumnBreakpoint) {
+  @media all and (max-width: $footerTwoColumnBreakpoint) {
+    top: -32%;
+  }
+
+  @media all and (max-width: $footerSingleColumnBreakpoint) {
     transform: scaleY(0.3);
     top: -27%;
   }

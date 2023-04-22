@@ -32,8 +32,13 @@ button {
     color: white;
   }
 
-  &:hover {
+  &:not(:disabled):hover {
     background: $highlightDark;
+  }
+
+  &:disabled {
+    background: #7f3737;
+    color: #d7d5d5;
   }
 }
 
@@ -68,4 +73,10 @@ h2 {
 
 b {
   font-weight: 600;
+}
+
+input {
+  padding: 1rem 2rem;
+  min-width: 100px;
+  max-width: 100%;
 }

@@ -10,6 +10,7 @@ import { PageFrame } from "@/common/assets/pageFrame";
 import { LayoutProps } from "@/common/models";
 
 import { Nav } from "./nav";
+import { NewsletterSubscription } from "./newsletterSubscription";
 import { hours } from "./data";
 
 export const GlobalLayout = ({ children }: LayoutProps) => (
@@ -65,6 +66,8 @@ export const GlobalLayout = ({ children }: LayoutProps) => (
           </a>
         </div>
       </section>
+
+      <NewsletterSubscription />
     </footer>
 
     <section className={styles.copyright}>© Michelle Poon, 2023</section>

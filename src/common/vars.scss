@@ -2,6 +2,7 @@ $primary: #ffc516;
 $primaryLight: #fbf9f2;
 $highlight: #bc0e0e;
 $highlightDark: #1b0707;
+$error: #ff6c6c;
 $maxContentWidth: 2300px;
 
 @mixin clickable {
@@ -9,9 +10,13 @@ $maxContentWidth: 2300px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
 
-  &:hover {
+  &:not(:disabled):hover {
     color: $primary;
     letter-spacing: 1px;
+  }
+
+  &:disabled {
+    cursor: default;
   }
 }
 
