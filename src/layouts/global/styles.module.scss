@@ -127,6 +127,19 @@ $footerSingleColumnBreakpoint: 890px;
       &:not(:last-child) {
         margin-bottom: 3rem;
       }
+
+      &:nth-of-type(1) {
+        order: 1;
+      }
+      &:nth-of-type(2) {
+        order: 2;
+      }
+      &:nth-of-type(3) {
+        order: 4;
+      }
+      &:nth-of-type(4) {
+        order: 3;
+      }
     }
 
     .logoSection .wheat {
@@ -136,6 +149,10 @@ $footerSingleColumnBreakpoint: 890px;
 
   @media all and (max-width: $footerSingleColumnBreakpoint) {
     flex-direction: column;
+
+    section {
+      order: unset !important;
+    }
   }
 }
 
