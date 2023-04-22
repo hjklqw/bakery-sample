@@ -181,3 +181,15 @@ $footerSingleColumnBreakpoint: 890px;
     top: -27%;
   }
 }
+
+.social {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+
+  a:not(:hover) {
+    color: white;
+  }
+}

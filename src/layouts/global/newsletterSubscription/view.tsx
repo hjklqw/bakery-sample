@@ -49,7 +49,7 @@ export const NewsletterSubscription = () => {
   }, []);
 
   return (
-    <section>
+    <>
       {isSubscribed ? (
         <div className={styles.message}>
           You are now subscribed!
@@ -87,6 +87,6 @@ export const NewsletterSubscription = () => {
           )}
         </>
       )}
-    </section>
+    </>
   );
 };

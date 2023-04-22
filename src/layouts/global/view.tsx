@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BsTelephone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
+import { FaGlobe, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import styles from "./styles.module.scss";
 
@@ -11,6 +12,7 @@ import { LayoutProps } from "@/common/models";
 
 import { Nav } from "./nav";
 import { NewsletterSubscription } from "./newsletterSubscription";
+import { SocialLink } from "./socialLink";
 import { hours } from "./data";
 
 export const GlobalLayout = ({ children }: LayoutProps) => (
@@ -67,7 +69,26 @@ export const GlobalLayout = ({ children }: LayoutProps) => (
         </div>
       </section>
 
-      <NewsletterSubscription />
+      <section>
+        <NewsletterSubscription />
+        <div className={styles.social}>
+          <SocialLink
+            href="https://michellepoon.ca/"
+            name="Portfolio Home"
+            icon={FaGlobe}
+          />
+          <SocialLink
+            href="https://github.com/hjklqw/bakery-sample"
+            name="Github"
+            icon={FaGithub}
+          />
+          <SocialLink
+            href="https://www.linkedin.com/in/michellepoon-dev"
+            name="LinkedIn"
+            icon={FaLinkedin}
+          />
+        </div>
+      </section>
     </footer>
 
     <section className={styles.copyright}>© Michelle Poon, 2023</section>
