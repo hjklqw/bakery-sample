@@ -1,0 +1,1 @@
+export { NewsletterSubscription } from "./view";

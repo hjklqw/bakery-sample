@@ -1,0 +1,44 @@
+@use "@/common/vars" as *;
+
+.message {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  svg {
+    vertical-align: text-top;
+  }
+
+  small {
+    font-size: 0.8em;
+    display: block;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    border: none;
+
+    &:focus {
+      outline: none;
+      background: $primaryLight;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.errorMessage {
+  margin-top: 1rem;
+  color: $error;
+}
