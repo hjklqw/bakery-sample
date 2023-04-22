@@ -10,9 +10,13 @@ $maxContentWidth: 2300px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
 
-  &:hover {
+  &:not(:disabled):hover {
     color: $primary;
     letter-spacing: 1px;
+  }
+
+  &:disabled {
+    cursor: default;
   }
 }
 

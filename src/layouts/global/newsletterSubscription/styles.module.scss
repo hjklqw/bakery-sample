@@ -6,11 +6,14 @@
 
   svg {
     vertical-align: text-top;
+    margin-left: 0.2rem;
+    font-size: 1.105em;
   }
 
   small {
-    font-size: 0.8em;
     display: block;
+    font-size: 0.8em;
+    margin-top: 0.2rem;
   }
 }
 
@@ -18,6 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 
   input {
     border: none;
@@ -29,12 +33,7 @@
   }
 
   button {
-    display: flex;
-    align-items: center;
-
-    svg {
-      margin-left: 0.5rem;
-    }
+    padding: 1rem 1.25rem;
   }
 }
 

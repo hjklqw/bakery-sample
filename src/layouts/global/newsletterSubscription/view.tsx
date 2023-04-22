@@ -66,13 +66,19 @@ export const NewsletterSubscription = () => {
           <div
             className={`${styles.controls} ${errorMessage ? styles.error : ""}`}
           >
-            <input placeholder="Email" ref={inputRef} disabled={isLoading} />
+            <input
+              placeholder="Email"
+              ref={inputRef}
+              disabled={isLoading}
+              onKeyUp={(e) => {
+                if (e.key === "Enter") onSubscribeClicked();
+              }}
+            />
             <button
               type="button"
               onClick={onSubscribeClicked}
               disabled={isLoading}
             >
-              Subscribe
               <AiTwotoneMail />
             </button>
           </div>
