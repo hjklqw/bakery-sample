@@ -1,0 +1,99 @@
+@use "@/common/vars" as *;
+
+.wrapper {
+  padding: 0 3rem;
+}
+
+.note {
+  background: #f3e3b6;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  $borderShred: 30px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - #{$borderShred}) 0%,
+    100% $borderShred,
+    100% 100%,
+    $borderShred 100%,
+    0% calc(100% - #{$borderShred})
+  );
+
+  svg {
+    font-size: 1.2em;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    color: #c94f4f;
+  }
+}
+
+.header {
+  $wheatWidth: 300px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  transform: translateX($wheatWidth / 2);
+
+  svg {
+    width: $wheatWidth;
+    transform: translateX(-50%);
+    margin-left: 1rem;
+    vertical-align: bottom;
+
+    g:first-child {
+      display: none;
+    }
+  }
+
+  @media all and (max-width: 655px) {
+    transform: none;
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+.form {
+  button[type="submit"] {
+    min-width: 170px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  > * {
+    flex: 1;
+    margin: 0 0.5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media all and (max-width: 585px) {
+    flex-wrap: wrap;
+
+    > * {
+      margin-left: 0;
+      margin-right: 0;
+      min-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.errorMessage {
+  margin-bottom: 2rem;
+  background: #bc0e0e;
+  color: white;
+  padding: 1.5rem 2rem;
+}

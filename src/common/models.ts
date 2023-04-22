@@ -6,3 +6,7 @@ export interface ApiResponse {
   success: boolean;
   error?: string;
 }
+
+export interface HtmlInputValue {
+  value: string;
+}

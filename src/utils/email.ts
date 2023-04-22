@@ -17,11 +17,54 @@ export async function addEmailSubscriber(email: string) {
     list_ids: [env.SENDGRID_SUBSCRIBERS_LIST_ID],
   };
   try {
-    await client.request({
-      url: `/v3/marketing/contacts`,
-      method: "PUT",
-      body,
-    });
+    return safeEmailApiCall(() =>
+      client.request({
+        url: `/v3/marketing/contacts`,
+        method: "PUT",
+        body,
+      })
+    );
+  } catch (error: any) {
+    let errorMessage = "";
+    try {
+      errorMessage = JSON.parse(error.errors)?.[0].message;
+    } catch {
+      errorMessage = error.toString();
+    }
+    return errorMessage;
+  }
+}
+
+/**
+ * Sends an email with the given parameters.
+ * @returns `null` when succeeded, and an error message otherwise.
+ */
+export async function sendEmail(params: {
+  to: string;
+  templateId: string;
+  dynamicTemplateData?: { [key: string]: any };
+}) {
+  const msg: sgMail.MailDataRequired = {
+    to: params.to,
+    from: {
+      name: "Imaginary Bakery",
+      email: env.SENDGRID_SENDER,
+    },
+    templateId: params.templateId,
+    dynamicTemplateData: params.dynamicTemplateData,
+  };
+  return safeEmailApiCall(() => sgMail.send(msg));
+}
+
+/**
+ * Makes an API call with try/catch handlers.
+ * @returns `null` when succeeded, and an error message otherwise.
+ */
+async function safeEmailApiCall(
+  makeCall: () => Promise<[sgMail.ClientResponse, {}]>
+) {
+  try {
+    await makeCall();
     return null;
   } catch (error: any) {
     let errorMessage = "";

@@ -4,6 +4,7 @@ const schema = z.object({
   SENDGRID_API_KEY: z.string(),
   SENDGRID_SENDER: z.string().email(),
   SENDGRID_SUBSCRIBERS_LIST_ID: z.string(),
+  SENDGRID_CONTACT_EMAIL_TEMPLATE_ID: z.string(),
 });
 
 const parsed = schema.safeParse(process.env);
