@@ -1,0 +1,185 @@
+@use "@/common/vars" as *;
+
+.pageWrapper {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  margin-bottom: 8rem;
+
+  header {
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    svg {
+      position: absolute;
+      width: 350px;
+      top: -1.5rem;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    header svg g:first-child {
+      display: none;
+    }
+  }
+
+  &:nth-of-type(even) {
+    header svg g:last-child {
+      display: none;
+    }
+  }
+}
+
+.intro {
+  header svg {
+    right: 12.5%;
+
+    @media all and (max-width: 1205px) {
+      left: 57%;
+    }
+    @media all and (max-width: 865px) {
+      display: none;
+    }
+  }
+
+  .quote {
+    margin-top: 5rem;
+    margin-right: 3rem;
+
+    & > figure {
+      margin-left: auto;
+    }
+  }
+
+  & > div {
+    display: flex;
+  }
+
+  .image {
+    flex-shrink: 0;
+    width: 550px;
+    height: 700px;
+    position: relative;
+    margin-left: 2rem;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  @media all and (max-width: 1180px) {
+    .image {
+      width: 40vw;
+    }
+  }
+
+  @media all and (max-width: 950px) {
+    & > div {
+      flex-direction: column-reverse;
+    }
+    .image {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.browse {
+  header svg {
+    left: 12%;
+  }
+
+  .categories {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    & > a {
+      position: relative;
+      width: 250px;
+      height: 600px;
+
+      img {
+        object-fit: cover;
+        z-index: -1;
+        transition: 0.3s ease-out;
+      }
+
+      .name {
+        font-size: 2rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+        background: rgba(255, 255, 255, 0.8);
+        transition: background 0.3s ease-out;
+      }
+
+      &:hover {
+        img {
+          filter: brightness(110%);
+        }
+        .name {
+          background: white;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 885px) {
+    header svg {
+      left: 2%;
+    }
+
+    .categories > a {
+      width: 100%;
+    }
+  }
+
+  @media all and (max-width: 700px) {
+    header svg {
+      display: none;
+    }
+
+    .categories {
+      grid-gap: 2rem;
+      grid-template-columns: 1fr;
+      width: calc(100vw - 6rem);
+      max-width: 500px;
+    }
+  }
+}
+
+.note {
+  @include note;
+
+  b {
+    margin-right: 0.3rem;
+  }
+
+  svg {
+    font-size: 1.15em;
+    margin-right: 0.35rem;
+    color: #8e6d07;
+  }
+
+  @media all and (max-width: 425px) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    b {
+      margin-right: 0;
+    }
+
+    span {
+      margin-top: 0.35rem;
+      flex: 1 100%;
+    }
+  }
+}

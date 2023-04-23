@@ -17,6 +17,10 @@ $mobileNavWidth: 580px;
     border: none;
     margin-left: auto;
     @include clickable;
+
+    &:hover {
+      background: none;
+    }
   }
 
   svg {

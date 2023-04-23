@@ -25,3 +25,24 @@ $maxContentWidth: 2300px;
   object-position: center;
   z-index: -1;
 }
+
+@mixin note {
+  background: #f3e3b6;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  $borderShred: 30px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - #{$borderShred}) 0%,
+    100% $borderShred,
+    100% 100%,
+    $borderShred 100%,
+    0% calc(100% - #{$borderShred})
+  );
+
+  svg {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+}

@@ -60,6 +60,24 @@
       padding-right: 0.5em;
     }
   }
+
+  &.noBackground {
+    opacity: 0.88;
+    max-width: 380px;
+    font-style: italic;
+
+    &::before {
+      transform: unset;
+    }
+
+    figcaption {
+      margin-top: 1rem;
+    }
+
+    @media all and (max-width: 950px) {
+      max-width: unset;
+    }
+  }
 }
 
 @media all and (max-width: 1630px) {

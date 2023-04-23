@@ -6,14 +6,21 @@ type Props = {
   text: string | JSX.Element;
   author: string;
   className?: string;
+  noBackground?: boolean;
 };
 
-export const Quote = ({ text, author, className }: Props) => (
+export const Quote = ({ text, author, className, noBackground }: Props) => (
   <figure
-    className={`${styles.wrapper} ${stylizedFont.className} ${className || ""}`}
+    className={`${styles.wrapper} ${stylizedFont.className} ${
+      noBackground ? styles.noBackground : ""
+    } ${className || ""}`}
   >
-    <span className={styles.bg} />
-    <span className={styles.bg} />
+    {!noBackground && (
+      <>
+        <span className={styles.bg} />
+        <span className={styles.bg} />
+      </>
+    )}
     <blockquote>{text}</blockquote>
     <figcaption>{author}</figcaption>
   </figure>
