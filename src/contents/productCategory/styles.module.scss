@@ -1,5 +1,7 @@
 @use "@/common/vars" as *;
 
+$priceColor: #614e14;
+
 .pageWrapper {
   margin: 0 3rem;
   margin-top: -2rem;
@@ -16,9 +18,20 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 2rem;
 
-  article {
+  & > article {
     text-align: center;
     overflow: hidden;
+    @include clickable;
+
+    img {
+      transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        filter: sepia(30%) brightness(105%);
+      }
+    }
 
     span {
       display: block;
@@ -30,14 +43,71 @@
 
       &.price {
         font-size: 0.75rem;
-        color: #614e14;
+        color: $priceColor;
       }
     }
   }
 
   @media all and (max-width: 1208px) {
-    article img {
+    & > article img {
       width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.modalContents {
+  display: flex;
+
+  img {
+    flex-shrink: 0;
+    margin-right: 2rem;
+  }
+
+  section.info {
+    max-width: 500px;
+
+    span,
+    label {
+      display: block;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #c7c4bd;
+
+      & + span {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .fancyName {
+      font-size: 5rem;
+      line-height: 1em;
+    }
+
+    .name {
+      font-weight: 600;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .price {
+      color: $priceColor;
+    }
+  }
+
+  @media all and (max-width: 1170px) {
+    flex-direction: column;
+
+    img {
+      margin-bottom: 2rem;
+      margin-right: 0;
+      width: 100%;
+      max-width: 80vw;
+      max-height: 80vw;
       object-fit: cover;
     }
   }

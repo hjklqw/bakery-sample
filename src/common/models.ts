@@ -16,7 +16,10 @@ export interface HtmlInputValue {
 export interface Product {
   slug: string;
   name: string;
+  description: string;
   price: string;
+  ingredients: string;
+  allergens?: string;
 }
 
 export class ProductCategory {
