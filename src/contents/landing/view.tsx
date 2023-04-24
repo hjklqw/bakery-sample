@@ -36,7 +36,7 @@ export const LandingPage = () => {
       >
         <div className={styles.categories}>
           {categories.map((c) => (
-            <Link href={`${Routes.PRODUCTS}/${c.slug}`} key={c.name}>
+            <Link href={c.route} key={c.name}>
               <Image
                 src={c.imageUrl}
                 fill

@@ -1,0 +1,1 @@
+export { ProductCategoryPage } from "./view";
