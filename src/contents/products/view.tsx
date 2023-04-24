@@ -5,9 +5,10 @@ import { HiOutlineLightBulb as NoteIcon } from "react-icons/hi";
 import { stylizedFont } from "@/common/fonts";
 import { Quote } from "@/common/quote";
 import { WheatLogo } from "@/common/assets/wheatLogo";
+import { Routes } from "@/common/routes";
+import { categories } from "@/common/data";
 
 import styles from "./styles.module.scss";
-import { categories } from "../landing";
 
 export const ProductsPage = () => (
   <div className={styles.pageWrapper}>
@@ -57,7 +58,7 @@ export const ProductsPage = () => (
       </header>
       <div className={styles.categories}>
         {categories.map((c) => (
-          <Link href={c.route} key={c.name}>
+          <Link href={`${Routes.PRODUCTS}/${c.slug}`} key={c.name}>
             <Image
               src={c.imageUrl}
               fill

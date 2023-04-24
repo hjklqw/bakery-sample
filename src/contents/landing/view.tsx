@@ -5,11 +5,13 @@ import { brandFont, stylizedFont } from "@/common/fonts";
 import { WheatLogo } from "@/common/assets/wheatLogo";
 import { PageFrame } from "@/common/assets/pageFrame";
 import { HeaderImage } from "@/common/headerImage";
+import { Routes } from "@/common/routes";
+import { categories } from "@/common/data";
 
 import styles from "./styles.module.scss";
 
 import { Section } from "./section";
-import { categories, commitments } from "./data";
+import { commitments } from "./data";
 
 export const LandingPage = () => {
   return (
@@ -34,7 +36,7 @@ export const LandingPage = () => {
       >
         <div className={styles.categories}>
           {categories.map((c) => (
-            <Link href={c.route} key={c.name}>
+            <Link href={`${Routes.PRODUCTS}/${c.slug}`} key={c.name}>
               <Image
                 src={c.imageUrl}
                 fill
@@ -85,7 +87,7 @@ export const LandingPage = () => {
               look more realistic, though most likely no one will ever read
               this. Soft, toasted bread with a chewy texture is the best.
             </p>
-            <Link href="/about">
+            <Link href={Routes.ABOUT}>
               <button type="button">Read more &rarr;</button>
             </Link>
           </section>

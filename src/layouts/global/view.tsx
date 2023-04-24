@@ -9,6 +9,7 @@ import { brandFont, stylizedFont } from "@/common/fonts";
 import { WheatLogo } from "@/common/assets/wheatLogo";
 import { PageFrame } from "@/common/assets/pageFrame";
 import { LayoutProps } from "@/common/models";
+import { Routes } from "@/common/routes";
 
 import { Nav } from "./nav";
 import { NewsletterSubscription } from "./newsletterSubscription";
@@ -19,7 +20,7 @@ export const GlobalLayout = ({ children }: LayoutProps) => (
   <div className={styles.wrapper}>
     <div className={styles.banner}>
       New products available for Mother&apos;s Day 2023!
-      <Link href="/special">Shop now! &rarr;</Link>
+      <Link href={Routes.SPECIAL}>Shop now! &rarr;</Link>
     </div>
     <Nav />
 

@@ -6,6 +6,8 @@ import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 
+import { Routes } from "@/common/routes";
+
 import styles from "./styles.module.scss";
 
 export const Nav = () => {
@@ -18,11 +20,11 @@ export const Nav = () => {
         </button>
       </div>
       <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/products">Products</Link>
-        <Link href="/special">Special</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href={Routes.HOME}>Home</Link>
+        <Link href={Routes.ABOUT}>About</Link>
+        <Link href={Routes.PRODUCTS}>Products</Link>
+        <Link href={Routes.SPECIAL}>Special</Link>
+        <Link href={Routes.CONTACT}>Contact</Link>
       </nav>
     </div>
   );
