@@ -26,8 +26,8 @@ export const ContactPage = () => (
         <NoteIcon title="note" />
         <span>
           <b>Note</b>: This is a real form hooked up to my email, so please
-          refrain from sending test data and use a real email as it will
-          otherwise become spam.
+          refrain from sending test data. Please enter a real email address If
+          you would like a reply!
         </span>
       </p>
     </section>
