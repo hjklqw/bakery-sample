@@ -1,3 +1,5 @@
+import { VscChromeClose as CloseIcon } from "react-icons/vsc";
+
 import styles from "./styles.module.scss";
 
 type Props = {
@@ -15,6 +17,9 @@ export const Modal = ({ children, onClose }: Props) => (
       }
     }}
   >
-    <article className={styles.wrapper}>{children}</article>
+    <article className={styles.wrapper}>
+      <CloseIcon onClick={onClose} className={styles.closeIcon} title="Close" />
+      {children}
+    </article>
   </div>
 );
