@@ -19,7 +19,10 @@ export const Nav = () => {
           {isMenuOpen ? <VscChromeClose /> : <GiHamburgerMenu />}
         </button>
       </div>
-      <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
+      <nav
+        className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}
+        onClick={() => setMenuOpen(false)}
+      >
         <Link href={Routes.HOME}>Home</Link>
         <Link href={Routes.ABOUT}>About</Link>
         <Link href={Routes.PRODUCTS}>Products</Link>
