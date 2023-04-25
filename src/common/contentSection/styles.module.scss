@@ -1,0 +1,45 @@
+@use "@/common/vars" as *;
+
+.section {
+  margin-bottom: 8rem;
+
+  header {
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    svg {
+      position: absolute;
+      width: 350px;
+      top: -1.5rem;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    header svg {
+      transform: translateX(-50%);
+      margin-left: 1rem;
+
+      &:first-child {
+        display: none;
+      }
+
+      g:first-child {
+        display: none;
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    header svg {
+      transform: translateX(calc(-50% - 1rem));
+
+      &:last-child {
+        display: none;
+      }
+
+      g:last-child {
+        display: none;
+      }
+    }
+  }
+}

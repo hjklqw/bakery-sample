@@ -1,0 +1,77 @@
+@use "@/common/vars" as *;
+
+.pageWrapper {
+  position: relative;
+  text-align: center;
+  padding: 0 2rem;
+
+  @media all and (max-width: 840px) {
+    & > section:first-child svg {
+      display: none;
+    }
+  }
+
+  @media all and (max-width: 805px) {
+    & > section:nth-child(2) svg,
+    & > section:last-child svg {
+      display: none;
+    }
+  }
+}
+
+.offer {
+  background: $primaryLight;
+  padding: 2rem;
+  padding-bottom: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid #f3ebd5;
+  display: inline-block;
+  box-shadow: 1px 1px 10px 0 rgb(88 72 23 / 20%);
+  max-width: 532px;
+  overflow: hidden;
+  position: relative;
+
+  .header {
+    font-size: 5rem;
+    color: $highlight;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  img {
+    object-fit: cover;
+    opacity: 0.1;
+  }
+}
+
+.gift {
+  position: relative;
+
+  .offer {
+    position: absolute;
+    top: 2rem;
+    right: 20%;
+
+    @media all and (max-width: 1300px) {
+      right: 12vw;
+    }
+
+    @media all and (max-width: 720px) {
+      position: relative;
+      margin-bottom: 2rem;
+      right: unset;
+      top: unset;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.galleryWrapper {
+  max-width: 820px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}

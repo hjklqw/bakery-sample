@@ -1,0 +1,1 @@
+export { SpecialPage } from "./view";

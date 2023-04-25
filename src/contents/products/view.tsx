@@ -2,20 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineLightBulb as NoteIcon } from "react-icons/hi";
 
-import { stylizedFont } from "@/common/fonts";
 import { Quote } from "@/common/quote";
-import { WheatLogo } from "@/common/assets/wheatLogo";
 import { categories } from "@/common/data";
+import { ContentSection } from "@/common/contentSection";
 
 import styles from "./styles.module.scss";
 
 export const ProductsPage = () => (
   <div className={styles.pageWrapper}>
-    <section className={`${styles.section} ${styles.intro}`}>
-      <header>
-        <h2 className={stylizedFont.className}>Fresh and warm</h2>
-        <WheatLogo />
-      </header>
+    <ContentSection headerText="Fresh and warm" className={styles.intro}>
       <div>
         <div className="p">
           <p>
@@ -42,19 +37,15 @@ export const ProductsPage = () => (
             Quisque pharetra blandit urna nec sagittis. Suspendisse tempus
             eleifend tempor, etiam iaculis nec arcu non dignissim.
           </p>
-          <p>Nulla vestibulum pretium odio, vel rutrum magna hendrerit at.</p>
+          <p>Nulla vestibulum pretium odio, vel rutrum magna at.</p>
         </div>
         <div className={styles.image}>
           <Image src="/products.jpg" alt="Our products" fill priority />
         </div>
       </div>
-    </section>
+    </ContentSection>
 
-    <section className={`${styles.section} ${styles.browse}`}>
-      <header>
-        <h2 className={stylizedFont.className}>Browse</h2>
-        <WheatLogo />
-      </header>
+    <ContentSection headerText="Browse" className={styles.browse}>
       <div className={styles.categories}>
         {categories.map((c) => (
           <Link href={c.route} key={c.name}>
@@ -68,9 +59,9 @@ export const ProductsPage = () => (
           </Link>
         ))}
       </div>
-    </section>
+    </ContentSection>
 
-    <section className={`${styles.section} ${styles.note}`}>
+    <section className={`${styles.note}`}>
       <NoteIcon />
       <b>Note:</b>
       <span>All of our products are subject to availability.</span>
