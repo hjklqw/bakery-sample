@@ -85,9 +85,82 @@ export const categories: ProductCategory[] = [
   new ProductCategory({
     name: "Pastries",
     slug: "pastries",
-    tagline: "",
-    description: [""],
-    items: [],
+    tagline: "Beautiful and delicious",
+    description: [
+      "Curabitur at volutpat turpis, sit amet fringilla turpis.",
+      "Click on a pastry to learn more about its ingredients, variations, and potential allergens.",
+    ],
+    items: [
+      {
+        name: "Fruit Tart",
+        slug: "fruit-tart",
+        price: "$7.50 / each",
+        description:
+          "A colourful mix of seasonal fruits on a bed of rich custard and a crunchy shortcrust base. Come in to see which fruits are used today!",
+        ingredients: "Shortcrust base, custard, whipped cream, assorted fruits",
+      },
+      {
+        name: "Berry Tart",
+        slug: "berry-tart",
+        price: "$8.50 / each",
+        description:
+          "A delightful mix of berries on a bed of rich custard and a crunchy shortcrust base.",
+        ingredients:
+          "Shortcrust base, custard, whipped cream, strawberries, blueberries",
+      },
+      {
+        name: "Lemon Tart",
+        slug: "lemon-tart",
+        price: "$9.50",
+        description:
+          "A sweet and slightly tart, creamy lemon custard filling on a crunchy shortcrust base, topped with crushed pistachios and a chocolate crown.",
+        ingredients:
+          "Shortcrust base, lemon custard, lemon cream, pistachios, mint, chocolate",
+      },
+      {
+        name: "Macaroons",
+        slug: "macaroons",
+        price: "$2.50 / each . $13.50 / 6-pack",
+        description:
+          "Sweet, crunchy, light and creamy. We have an assortment of rotating flavours, including Earl Gray, Coffee, Rose, and more.",
+        ingredients: "",
+      },
+      {
+        name: "Blueberry Danish",
+        slug: "blueberry-danish",
+        price: "$4.50 / each",
+        description:
+          "Juicy bluberries wrapped inside our signature flaky and buttery puff pastry. The perfect balance of sweet, with a hint of savoury.",
+        ingredients: "Puff pastry, blueberries, bluerry jam",
+      },
+      {
+        name: "Croissants",
+        slug: "croissants",
+        price: "$4.25 - $5.25 / each",
+        description:
+          "Come in to try out our variaty of super light and ariy croissants! We have flavours such as Plain, Almond, and Chocolate.",
+        ingredients:
+          "Puff pastry, assorted toppings and fillings (almonds, chocolate)",
+      },
+      {
+        name: "Cupcakes",
+        slug: "cupcakes",
+        price: "$3.50 / each",
+        description:
+          "Donec ultrices felis libero, sit amet consequat ligula commodo at. Fusce risus leo, dignissim a ligula sit amet, blandit imperdiet turpis.",
+        ingredients:
+          "Duis risus turpis, lobortis ut ligula sed, bibendum pretium nisi.",
+      },
+      {
+        name: "Cookies",
+        slug: "cookies",
+        price: "$2.25 / each . $12 / assorted 6-pack",
+        description:
+          "Praesent faucibus sodales nunc vel interdum. Sed ut sem mattis, aliquam orci eget, mollis est.",
+        ingredients:
+          "Duis blandit magna ut elit feugiat, eget facilisis neque imperdiet.",
+      },
+    ],
     imagePosition: "50% 50%",
     headerImage: {
       basePosY: 47,

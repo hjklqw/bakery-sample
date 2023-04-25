@@ -48,6 +48,7 @@ $imageBorder: 1px solid #dfdcd5;
       &.price {
         font-size: 0.75rem;
         color: $priceColor;
+        white-space: nowrap;
       }
     }
   }
