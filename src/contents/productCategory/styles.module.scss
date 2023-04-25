@@ -71,6 +71,7 @@ $imageBorder: 1px solid #dfdcd5;
 
   section.info {
     max-width: 500px;
+    min-width: 300px;
 
     span,
     label {
@@ -89,12 +90,13 @@ $imageBorder: 1px solid #dfdcd5;
 
     .fancyName {
       font-size: 5rem;
-      line-height: 1em;
+      line-height: 0.8em;
+      opacity: 0.25;
     }
 
     .name {
       font-weight: 600;
-      margin-top: -1rem;
+      margin-top: -0.8rem;
       margin-bottom: 2rem;
       font-size: 1.5rem;
     }
@@ -106,6 +108,7 @@ $imageBorder: 1px solid #dfdcd5;
 
   @media all and (max-width: 1170px) {
     flex-direction: column;
+    min-width: unset;
 
     img {
       margin-bottom: 2rem;

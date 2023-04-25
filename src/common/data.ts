@@ -4,9 +4,80 @@ export const categories: ProductCategory[] = [
   new ProductCategory({
     name: "Breads",
     slug: "breads",
-    tagline: "",
-    description: [""],
-    items: [],
+    tagline: "Fresh from the oven",
+    description: [
+      "We offer a wide variety of classic and rustic breads, baked fresh and warm in small batches.",
+      "Click on a bread to learn more about its ingredients and potential allergens.",
+    ],
+    items: [
+      {
+        name: "Baguette",
+        slug: "baguette",
+        price: "$3 / each",
+        description:
+          "A classic white baguette, perfectly chewy with a crusty exterior.",
+        ingredients: "Flour, water, salt, yeast",
+      },
+      {
+        name: "Ciabatta",
+        slug: "ciabatta",
+        price: "$1.70 / each . $3 / 2-pack",
+        description:
+          "A rustic italian-style bread: soft chewy on the inside, with lightly crusty exterior.",
+        ingredients: "Flour, water, olive oil, salt, yeast",
+      },
+      {
+        name: "Multigrain Raisin Loaf",
+        slug: "multigrain",
+        price: "$10 / each",
+        description:
+          "A fluffy bread that is slightly sweet, made with healthy whole grains and a touch of honey.",
+        ingredients:
+          "Multigrain flour, water, salt, yeast, honey, butter, cinnamon, raisins, sugar",
+        allergens: "Contains dairy.",
+      },
+      {
+        name: "Rye",
+        slug: "rye",
+        price: "$5.50 / each",
+        description:
+          "Pellentesque eget metus vehicula, hendrerit nisl vel, volutpat nunc.",
+        ingredients: "Ut iaculis ut turpis sit amet dignissim.",
+      },
+      {
+        name: "Sourdough",
+        slug: "sourdough",
+        price: "$4.50 / each",
+        description:
+          "Vivamus sagittis consequat urna, eu pulvinar nunc porta at. Aliquam erat volutpat.",
+        ingredients: "Sed ac velit a dui faucibus tempor.",
+      },
+      {
+        name: "Bagels",
+        slug: "bagels",
+        price: "$2.50 / each . $12 / 6-pack",
+        description:
+          "Come in to try out our weekly assorted, rotating flavours, such as Poppy Seed, Everything, Cinnamon Raisin, and more!",
+        ingredients: "",
+      },
+      {
+        name: "Flatbread",
+        slug: "flatbread",
+        price: "$2.25 / each . $10 / 6-pack",
+        description:
+          "I have no idea what this is actually called but it looks delicious.",
+        ingredients: "",
+      },
+      {
+        name: "Swiss Buns",
+        slug: "swissbuns",
+        price: "$6.99 / 4-pack",
+        description:
+          "Praesent finibus nunc vitae diam placerat, id fermentum diam finibus.",
+        ingredients:
+          "Mauris nunc diam, semper sit amet lobortis et, venenatis sed enim.",
+      },
+    ],
     headerImage: {
       basePosY: 75,
     },
