@@ -35,12 +35,10 @@ export const ProductModal = ({ product, imageSrc, onClose }: Props) => (
           {product.ingredients || "Coming soon!"}
         </span>
 
-        {product.allergens && (
-          <>
-            <label>Allergens</label>
-            <span className={styles.description}>{product.allergens}</span>
-          </>
-        )}
+        <label>Allergens</label>
+        <span className={styles.description}>
+          {product.allergens || "None"}
+        </span>
       </section>
     </div>
   </Modal>

@@ -1,6 +1,7 @@
 @use "@/common/vars" as *;
 
 $priceColor: #614e14;
+$imageBorder: 1px solid #dfdcd5;
 
 .pageWrapper {
   margin: 0 3rem;
@@ -25,11 +26,14 @@ $priceColor: #614e14;
 
     img {
       transition: 0.3s ease-in-out;
+      box-shadow: 0.5px 0.5px 5px 0 rgb(88 72 23 / 30%);
+      border: $imageBorder;
     }
 
     &:hover {
       img {
         filter: sepia(30%) brightness(105%);
+        box-shadow: 0.5px 0.5px 10px 0 rgb(88 72 23 / 50%);
       }
     }
 
@@ -62,6 +66,7 @@ $priceColor: #614e14;
   img {
     flex-shrink: 0;
     margin-right: 2rem;
+    border: $imageBorder;
   }
 
   section.info {
