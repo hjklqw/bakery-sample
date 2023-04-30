@@ -27,10 +27,7 @@ button {
   background: $highlight;
   border: none;
   padding: 1rem 2rem;
-
-  &:not(:hover) {
-    color: white;
-  }
+  color: white;
 
   &:not(:disabled):hover {
     background: $highlightDark;

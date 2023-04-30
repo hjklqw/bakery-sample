@@ -19,7 +19,7 @@ $mobileNavWidth: 580px;
     @include clickable;
 
     &:hover {
-      background: none;
+      background: none !important;
     }
   }
 
