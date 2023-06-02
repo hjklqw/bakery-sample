@@ -10,7 +10,6 @@ export default function Page() {
         title="Contact"
         headerImage={{
           src: "/contact-header.jpg",
-          basePosY: 20,
           filterStyle: "contrast(60%)",
         }}
       />

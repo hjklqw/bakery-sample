@@ -10,7 +10,6 @@ export default function Page() {
         title="Products"
         headerImage={{
           src: "/products-header.jpg",
-          basePosY: 95,
           filterStyle: "contrast(50%)",
         }}
       />

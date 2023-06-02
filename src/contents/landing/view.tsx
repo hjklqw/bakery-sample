@@ -19,7 +19,6 @@ export const LandingPage = () => {
       <header className={styles.header}>
         <HeaderImage
           src="/site-header.jpg"
-          basePosY={80}
           filterStyle="contrast(68%) brightness(88%)"
         />
         <h1 className={brandFont.className}>Imaginary Bakery</h1>

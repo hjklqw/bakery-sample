@@ -78,9 +78,6 @@ export const categories: ProductCategory[] = [
           "Mauris nunc diam, semper sit amet lobortis et, venenatis sed enim.",
       },
     ],
-    headerImage: {
-      basePosY: 153,
-    },
   }),
   new ProductCategory({
     name: "Pastries",
@@ -163,7 +160,6 @@ export const categories: ProductCategory[] = [
     ],
     imagePosition: "50% 50%",
     headerImage: {
-      basePosY: 88,
       filterStyle: "brightness(90%) contrast(68%)",
     },
   }),
@@ -250,7 +246,6 @@ export const categories: ProductCategory[] = [
     ],
     imagePosition: "50% 60%",
     headerImage: {
-      basePosY: 181,
       filterStyle: "brightness(80%) contrast(65%)",
     },
   }),

@@ -10,7 +10,6 @@ export default function Page() {
         title="Mother's Day"
         headerImage={{
           src: "/special-header.jpg",
-          basePosY: 60,
           filterStyle: "brightness(80%) contrast(80%)",
         }}
         wheatLogoAdjustments={{ marginTop: "-2rem" }}

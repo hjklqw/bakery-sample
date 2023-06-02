@@ -28,7 +28,6 @@ export default function Page({ params: { categorySlug } }: Props) {
         title={categoryData.name}
         headerImage={{
           src: categoryData.headerImageUrl,
-          basePosY: categoryData.headerImageSettings?.basePosY || 50,
           filterStyle:
             categoryData.headerImageSettings?.filterStyle || "contrast(50%)",
         }}

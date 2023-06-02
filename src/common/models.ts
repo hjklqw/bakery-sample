@@ -31,7 +31,6 @@ export class ProductCategory {
 
   readonly imagePosition?: string;
   readonly headerImageSettings?: {
-    basePosY?: number;
     filterStyle?: string;
   };
 
@@ -43,7 +42,6 @@ export class ProductCategory {
     items: Product[];
     imagePosition?: string;
     headerImage?: {
-      basePosY?: number;
       filterStyle?: string;
     };
   }) {
