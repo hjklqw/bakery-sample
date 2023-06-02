@@ -5,7 +5,6 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  optimizeFonts: false,
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,

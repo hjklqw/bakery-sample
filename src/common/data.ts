@@ -79,7 +79,7 @@ export const categories: ProductCategory[] = [
       },
     ],
     headerImage: {
-      basePosY: 75,
+      basePosY: 153,
     },
   }),
   new ProductCategory({
@@ -163,7 +163,7 @@ export const categories: ProductCategory[] = [
     ],
     imagePosition: "50% 50%",
     headerImage: {
-      basePosY: 47,
+      basePosY: 88,
       filterStyle: "brightness(90%) contrast(68%)",
     },
   }),
@@ -250,7 +250,7 @@ export const categories: ProductCategory[] = [
     ],
     imagePosition: "50% 60%",
     headerImage: {
-      basePosY: 92,
+      basePosY: 181,
       filterStyle: "brightness(80%) contrast(65%)",
     },
   }),

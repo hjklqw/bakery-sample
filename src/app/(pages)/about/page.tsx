@@ -10,7 +10,7 @@ export default function Page() {
         title="About"
         headerImage={{
           src: "/about-header.jpg",
-          basePosY: 60,
+          basePosY: 106,
           filterStyle: "contrast(60%)",
         }}
       />

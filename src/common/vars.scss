@@ -20,12 +20,6 @@ $maxContentWidth: 2300px;
   }
 }
 
-@mixin headerImage {
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
-}
-
 @mixin note {
   background: #f3e3b6;
   padding: 2rem;
