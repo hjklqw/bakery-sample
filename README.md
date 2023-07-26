@@ -8,6 +8,8 @@ This is a sample website for a bakery, bootstrapped with [`create-next-app`](htt
 - SASS/SCSS
 - Zod (schema validation for forms and API endpoints)
 - Email integration (SendGrid: Mailing list subscription, contact form)
+- Jest
+- React Testing Library
 
 ## Portfolio
 
