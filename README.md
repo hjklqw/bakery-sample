@@ -7,9 +7,18 @@ This is a sample website for a bakery, bootstrapped with [`create-next-app`](htt
 - Next.js 13 (with the `/app` directory)
 - SASS/SCSS
 - Zod (schema validation for forms and API endpoints)
-- Email integration (SendGrid: Mailing list subscription, contact form)
+- Email integration (SendGrid)
 - Jest
 - React Testing Library
+- Cypress
+
+## Features
+
+- Fully responsive
+- CSS transitions
+- Env var validation
+- Functional Newsletter subscription
+- Functional contact form
 
 ## Portfolio
 

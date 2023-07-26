@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
   if (!parsed.success) {
     const res: ApiResponse = {
       success: false,
-      error: parsed.error.issues?.[0]?.message || "Please reenter your email.",
+      error: parsed.error.issues?.[0]?.message || "Please re-enter your email.",
     };
     return NextResponse.json(res);
   }

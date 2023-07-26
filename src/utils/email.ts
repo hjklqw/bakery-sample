@@ -16,23 +16,13 @@ export async function addEmailSubscriber(email: string) {
     contacts: [{ email }],
     list_ids: [env.SENDGRID_SUBSCRIBERS_LIST_ID],
   };
-  try {
-    return safeEmailApiCall(() =>
-      client.request({
-        url: `/v3/marketing/contacts`,
-        method: "PUT",
-        body,
-      })
-    );
-  } catch (error: any) {
-    let errorMessage = "";
-    try {
-      errorMessage = JSON.parse(error.errors)?.[0].message;
-    } catch {
-      errorMessage = error.toString();
-    }
-    return errorMessage;
-  }
+  return safeEmailApiCall(() =>
+    client.request({
+      url: `/v3/marketing/contacts`,
+      method: "PUT",
+      body,
+    })
+  );
 }
 
 /**

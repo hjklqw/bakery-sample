@@ -10,6 +10,7 @@ import { WheatLogo } from "@/common/assets/wheatLogo";
 import { PageFrame } from "@/common/assets/pageFrame";
 import { LayoutProps } from "@/common/models";
 import { Routes } from "@/common/routes";
+import { TestId } from "@/common/testIds";
 
 import { Nav } from "./nav";
 import { NewsletterSubscription } from "./newsletterSubscription";
@@ -18,7 +19,7 @@ import { hours } from "./data";
 
 export const GlobalLayout = ({ children }: LayoutProps) => (
   <div className={styles.wrapper}>
-    <div className={styles.banner}>
+    <div className={styles.banner} data-testid={TestId.SPECIAL_BANNER}>
       New products available for Mother&apos;s Day 2023!
       <Link href={Routes.SPECIAL}>Shop now! &rarr;</Link>
     </div>

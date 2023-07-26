@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 
 import { Routes } from "@/common/routes";
+import { TestId } from "@/common/testIds";
 
 import styles from "./styles.module.scss";
 
@@ -22,6 +23,7 @@ export const Nav = () => {
       <nav
         className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}
         onClick={() => setMenuOpen(false)}
+        data-testid={TestId.GLOBAL_NAV}
       >
         <Link href={Routes.HOME}>Home</Link>
         <Link href={Routes.ABOUT}>About</Link>
