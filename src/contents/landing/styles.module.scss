@@ -54,9 +54,23 @@
   padding-bottom: 5rem;
 
   header {
+    --animate: false;
     margin-bottom: 3rem;
     text-align: center;
     padding: 0 2rem;
+    animation: trigger steps(1) forwards;
+    animation-timeline: view();
+    animation-range: entry;
+
+    @container style(--animate: true) {
+      h2 {
+        animation: appear 0.78s ease-out;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
 
     p {
       position: relative;
@@ -66,6 +80,26 @@
     svg {
       position: absolute;
       width: 80%;
+    }
+  }
+
+  @keyframes trigger {
+    to {
+      --animate: true;
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
